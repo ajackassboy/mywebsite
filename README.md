@@ -1,66 +1,92 @@
-# My Website
+# 防災減災ポッドキャスト
 
-This is a GitHub Pages website created with HTML and CSS.
+このリポジトリは、防災減災ポッドキャスト番組の公式ウェブサイトです。
 
-## Overview
+## 概要
 
-A simple and modern website template hosted on GitHub Pages. This repository contains the source code for a responsive website with a clean design.
+防災・減災に関する知識を、わかりやすく、楽しくお届けするポッドキャスト番組のウェブサイトです。
 
-## Features
+### 掲載内容
 
-- 📱 Fully responsive design
-- 🎨 Modern styling with CSS
-- 🚀 Fast and free hosting via GitHub Pages
-- 🔒 Secure HTTPS connections
-- ♿ Accessibility-friendly
+- 📻 番組紹介
+- 📚 配信済みエピソードのアーカイブ
+- 📅 今後の配信予定
+- 📢 お知らせ
 
-## Getting Started
+## ファイル構成
 
-This website is automatically published at: `https://ajackassboy.github.io/mywebsite/`
-
-### Local Development
-
-To view this site locally:
-
-1. Clone the repository:
-```bash
-git clone https://github.com/ajackassboy/mywebsite.git
-cd mywebsite
+```
+mywebsite/
+├── index.html          # ホームページ
+├── archive.html        # エピソード一覧ページ
+├── styles.css          # スタイルシート
+├── images/             # 画像フォルダ（ポッドキャストカバーなど）
+└── README.md           # このファイル
 ```
 
-2. Open `index.html` in your web browser
+## セットアップ
 
-Or use a local server:
-```bash
-python -m http.server 8000
+このサイトはGitHub Pagesで公開されています。
+
+**公開URL:** `https://ajackassboy.github.io/mywebsite/`
+
+## カスタマイズ方法
+
+### 番組情報の更新
+
+`index.html` の以下の部分を編集して番組情報を更新してください：
+
+- **番組紹介テキスト**: `<section id="about">` 内のテキスト
+- **配信予定**: `<section id="schedule">` 内のスケジュール項目
+- **お知らせ**: `<section id="news">` 内のニュース項目
+
+### エピソード情報の追加
+
+`archive.html` に新しいエピソード情報を追加してください：
+
+```html
+<article class="episode-card">
+    <div class="episode-number">第XX回</div>
+    <h3>エピソード名</h3>
+    <p class="episode-date">YYYY年MM月DD日配信</p>
+    <p class="episode-description">
+        エピソードの説明文
+    </p>
+    <div class="episode-meta">
+        <span class="episode-duration">約XX分</span>
+        <a href="#" class="listen-btn">聴く</a>
+    </div>
+</article>
 ```
 
-Then visit `http://localhost:8000` in your browser.
+### ポッドキャストカバー画像の追加
 
-## Customization
+1. `images/` フォルダを作成（まだない場合）
+2. ポッドキャストのカバー画像を `images/podcast-cover.jpg` として保存
+3. `index.html` の `<img src="images/podcast-cover.jpg">` を確認
 
-You can customize the website by:
+## スタイルのカスタマイズ
 
-1. Editing `index.html` to change content and structure
-2. Modifying the CSS in the `<style>` section
-3. Adding more HTML pages and updating the navigation
+`styles.css` で以下の色をカスタマイズできます：
 
-## Deploy
+- **ヘッダー背景色**: `#2c3e50`
+- **アクセント色**: `#e74c3c` (赤), `#3498db` (青)
+- **メインカラー**: グラデーション `#667eea` 〜 `#764ba2`
 
-Simply push your changes to the `main` branch:
+## 配信プラットフォームへのリンク
 
-```bash
-git add .
-git commit -m "Update website"
-git push origin main
-```
+`index.html` の footer セクションと`styles.css` の `.social-links` を編集して、以下のプラットフォームへのリンクを追加してください：
 
-GitHub Pages will automatically deploy your changes within a few minutes.
+- Spotify
+- Apple Podcasts
+- Google Podcasts
+- Amazon Music
+- その他の配信プラットフォーム
 
-## License
+## ライセンス
 
-This project is open source and available under the MIT License.
+© 2024 防災減災ポッドキャスト. All rights reserved.
 
-## Support
+## お問い合わせ
 
-For questions or issues, please visit the [GitHub Issues](https://github.com/ajackassboy/mywebsite/issues) page.
+番組に関するご質問やご意見は、お知らせセクションの連絡先までお願いします。
